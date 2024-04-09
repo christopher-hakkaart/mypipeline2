@@ -1,1 +1,6 @@
 repository_type: pipeline
+lint:
+  files_unchanged:
+    - assets/nf-core-mypipeline_logo_light.png
+    - docs/images/nf-core-mypipeline_logo_light.png
+    - docs/images/nf-core-mypipeline_logo_dark.png
