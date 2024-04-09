@@ -267,6 +267,30 @@
                     "help_text": "Allows string values that are parseable as numbers or booleans. For further information see [JSONSchema docs](https://github.com/everit-org/json-schema#lenient-mode)."
                 }
             }
+        },
+        "fastp_options": {
+            "title": "FASTP options",
+            "type": "object",
+            "description": "Options for customizing fastp",
+            "default": "",
+            "properties": {
+                "adapters": {
+                    "type": "string",
+                    "fa_icon": "fas fa-balance-scale",
+                    "description": "File in FASTA format containing possible adapters to remove."
+                },
+                "save_merged": {
+                    "type": "boolean",
+                    "fa_icon": "fas fa-car-side",
+                    "description": "Specify true to save all merged reads to the a file"
+                },
+                "save_trimmed_fail": {
+                    "type": "boolean",
+                    "fa_icon": "fas fa-bowling-ball",
+                    "description": "Specify true to save files that failed to pass trimming thresholds"
+                }
+            },
+            "fa_icon": "fas fa-carrot"
         }
     },
     "allOf": [
@@ -284,6 +308,9 @@
         },
         {
             "$ref": "#/definitions/generic_options"
+        },
+        {
+            "$ref": "#/definitions/fastp_options"
         }
     ]
 }
